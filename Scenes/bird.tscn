@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://b71utjq1k23kd"]
+
+[ext_resource type="Texture2D" uid="uid://dyasm1fruq87r" path="res://Assets/img/obstacles/Bird.png" id="1_qrqej"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00tyl"]
+atlas = ExtResource("1_qrqej")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_df57b"]
+atlas = ExtResource("1_qrqej")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ha5x"]
+atlas = ExtResource("1_qrqej")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oba5"]
+atlas = ExtResource("1_qrqej")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wq6sl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00tyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_df57b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ha5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4oba5")
+}],
+"loop": true,
+"name": &"fliying",
+"speed": 10.0
+}]
+
+[node name="Bird" type="Area2D"]
+texture_filter = 1
+scale = Vector2(4, 4)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wq6sl")
+animation = &"fliying"
+autoplay = "fliying"
+frame_progress = 0.222747
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-15, -0.75, -11.5, -5.5, -4.25, -8, 0, -11, 6, -11, 13.75, -2.75, 14.75, -0.25, 12, 10, 6.25, 12, -0.25, 7.75, -11.5, 7, -15.25, 2.75)
