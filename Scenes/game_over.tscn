@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cc57mxfowjrpi"]
+
+[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://Assets/fonts/retro.ttf" id="1_1x2ej"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1pems"]
+bg_color = Color(0.244214, 0.555124, 3.85046e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ttjgo"]
+bg_color = Color(0.281519, 0.722609, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l7wig"]
+bg_color = Color(0, 0.386409, 0.0243495, 1)
+
+[node name="GameOver" type="CanvasLayer"]
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -218.0
+offset_top = -45.0
+offset_right = 218.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1x2ej")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/hover = SubResource("StyleBoxFlat_1pems")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ttjgo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l7wig")
+text = "REINICIAR"

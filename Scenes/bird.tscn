@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://b71utjq1k23kd"]
+[gd_scene load_steps=8 format=3 uid="uid://b71utjq1k23kd"]
 
+[ext_resource type="Script" path="res://Scenes/bird.gd" id="1_7r476"]
 [ext_resource type="Texture2D" uid="uid://dyasm1fruq87r" path="res://Assets/img/obstacles/Bird.png" id="1_qrqej"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_00tyl"]
@@ -41,6 +42,7 @@ animations = [{
 [node name="Bird" type="Area2D"]
 texture_filter = 1
 scale = Vector2(4, 4)
+script = ExtResource("1_7r476")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wq6sl")
